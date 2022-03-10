@@ -2,7 +2,7 @@ type
   Scene* = ref object of RootObj
 
 # this is the global current scene
-var scene*: Scene
+var currentScene*: Scene
 
 # do all initialization
 method load*(this:Scene) {.base.} =
@@ -19,5 +19,5 @@ method unload*(this:Scene) {.base.} =
 # switch to a new scene
 method set_scene*(this:Scene, s:Scene) {.base.} =
   this.unload()
-  scene = s
-  scene.load()
+  currentScene = s
+  currentScene.load()

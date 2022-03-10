@@ -2,8 +2,8 @@ import std/[times, os]
 import scene
 import scene_intro
 
-scene = SceneIntro()
-scene.load()
+currentScene = SceneIntro()
+currentScene.load()
 
 var keep_looping = true
 
@@ -15,6 +15,6 @@ setControlCHook(ctrlc)
 
 while keep_looping:
   sleep(1000) 
-  scene.update(cpuTime() * 10000)
+  currentScene.update(cpuTime() * 10000)
 
-scene.unload()
+currentScene.unload()

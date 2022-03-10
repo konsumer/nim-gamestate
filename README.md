@@ -7,9 +7,3 @@ nim c -r onefile.nim
 
 nim c -r seperatefiles/main.nim
 ```
-
-Currently, onefile works, but  I get this error on seperatefiles:
-
-```
-seperatefiles/main.nim(5, 1) Error: expression 'scene' has no type (or is ambiguous)
-```
